@@ -16,14 +16,16 @@ const Home = () => {
 	return (
 		<div className="text-center">
 			<Navbar/>
-			<Jumbotron/>
-			<div className= "d-flex justify-content-center w-100 mt-5">
-				{cardPropi.map((card,index)=>{
-					return(
-						<Card image={card.image} title={card.title} paragraph={card.paragraph} key={index}/>
-					)
-				}
-				)}
+			<div className="container">
+				<Jumbotron/>
+				<div className= "d-flex justify-content-center w-100 mt-5">
+					{cardPropi.map((card,index)=>{
+						return(
+							<Card image={card.image} title={card.title} paragraph={card.paragraph} key={index}/>
+						)
+					}
+					)}
+				</div>				
 			</div>
 			<Footer/>
 		</div>
